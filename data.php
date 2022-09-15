@@ -20,16 +20,14 @@ include('template/cek_login.php');
     <?php include('template/sidebar.php') ?>
     <!-- ISI CONTENT -->
     <div class="p-10 -ml-3" style="background-color:#0d0c22">
-
         <a href='tambah.php' class=" bg-blue-500 hover:underline text-white font-bold p-3 rounded">+ Tambah Data</a>
 
 
         <!-- Table Penerimaan Pegawai -->
-
-        <div class="overflow-x-auto pt-6 relative shadow-md sm:rounded-lg">
+        <div class="overflow-y-auto h-96 mt-6 relative shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
+                <thead class="">
+                    <tr class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 sticky top-0">
                         <th scope="col" class="py-3 px-6">
                             No.
                         </th>
@@ -87,10 +85,16 @@ include('template/cek_login.php');
                             </td>
                             <td class="py-4 px-6 text-center">
                                 <span class="
-                                <?php 
-                                if($user_data['status'] === "Menunggu") { echo "bg-yellow-300 text-yellow-800"; }
-                                if($user_data['status'] === "Diterima") { echo "bg-green-300 text-green-800"; }
-                                if($user_data['status'] === "Ditolak") { echo "bg-red-300 text-red-800"; }
+                                <?php
+                                if ($user_data['status'] === "Menunggu") {
+                                    echo "bg-yellow-300 text-yellow-800";
+                                }
+                                if ($user_data['status'] === "Diterima") {
+                                    echo "bg-green-300 text-green-800";
+                                }
+                                if ($user_data['status'] === "Ditolak") {
+                                    echo "bg-red-300 text-red-800";
+                                }
                                 ?>bg-yellow-300 text-yellow-800 font-bold p-2 rounded">
                                     <?= $user_data['status'] ?>
                                 </span>
