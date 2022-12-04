@@ -41,6 +41,7 @@ while ($user_data = mysqli_fetch_array($result)) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Detail Data</title>
 </head>
 
 <body class="bg-gray-100 grid grid-ku ">
@@ -52,7 +53,7 @@ while ($user_data = mysqli_fetch_array($result)) {
         <div class="overflow-x-auto pt-6 relative shadow-md sm:rounded-lg">
             <div class="text-white px-6 rounded mb-3" style="background-color: #12102f;">
                 <div class="flex items-center py-4 overflow-y-auto whitespace-nowrap">
-                    <a href="#" class="text-gray-600 dark:text-gray-200">
+                    <a href="index.php" class="text-gray-600 dark:text-gray-200">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                         </svg>
@@ -154,9 +155,7 @@ while ($user_data = mysqli_fetch_array($result)) {
                     <form method="post">
                         <input type="submit" class="bg-red-400 px-5 py-3 font-bold rounded text-xl cursor-pointer" value="Tolak" name="tolak">
                     </form>
-
                 </div>
-
             </div>
         </div>
 
